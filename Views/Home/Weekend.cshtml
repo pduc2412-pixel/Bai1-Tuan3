@@ -1,0 +1,24 @@
+@{
+    Layout = null;
+    bool isWeekend = DateTime.Now.DayOfWeek == DayOfWeek.Saturday
+                  || DateTime.Now.DayOfWeek == DayOfWeek.Sunday;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cuối tuần</title>
+</head>
+<body>
+    <h2>Hôm nay là @DateTime.Now.ToString("dd/MM/yyyy")</h2>
+
+    @if (isWeekend)
+    {
+        <p>Hôm nay là cuối tuần.</p>
+    }
+    else
+    {
+        <p>Hôm nay không phải cuối tuần.</p>
+    }
+</body>
+</html>
